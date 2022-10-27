@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://wall.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 179, 303 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -77, 148 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( -50, 223 )
+
+[node name="StaticBody2D" parent="StaticBody2D" instance=ExtResource( 2 )]
+position = Vector2( 146, -42 )
+
+[node name="StaticBody2D2" parent="StaticBody2D" instance=ExtResource( 2 )]
+position = Vector2( 306, -154 )
+
+[node name="StaticBody2D3" parent="StaticBody2D" instance=ExtResource( 2 )]
+position = Vector2( 552, -9 )
+
+[node name="StaticBody2D4" parent="StaticBody2D" instance=ExtResource( 2 )]
+position = Vector2( 697, -9 )
+
+[node name="StaticBody2D5" parent="StaticBody2D" instance=ExtResource( 3 )]
+position = Vector2( 343, -273 )
+
+[node name="StaticBody2D6" parent="StaticBody2D" instance=ExtResource( 2 )]
+position = Vector2( 448, -154 )
